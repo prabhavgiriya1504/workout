@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <header class="header">
+        <div id="logo">
+            <img src="./images/Screenshot 2024-08-27 170823.png" width="150%"alt="Health Matters">
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+        <div id="nav">
+            <nav>
+                <a href="./images/chest/chest.html">Chest</a>
+                <a href="./abs/back/back.html">Back</a>
+                <a href="./biceps/biceps.html">Biceps</a>
+                <a href="./triceps/triceps.html">Triceps</a>
+                <a href="./abs/abs.html">Abs</a>
+                <a href="./legs/legs.html">Legs</a>
+                <a href="./arms/arms.html">Arm</a>
+            </nav>
+        </div>
+    </header>
+    
+
+    <main>
+        <section class="workout-cards">
+
+
+    <div class="card" onclick="showDetails(this)" data-title="Chest Workout" data-description="This is a great workout for building your chest muscles." data-link="./images/chest/chest.html">
+        <img src="./images/chesta1.jpg" height="92%" alt="Upper Body">
+        <h3>Chest</h3>
+    </div>
+    <div class="card" onclick="showDetails(this)" data-title="Biceps Workout" data-description="This workout targets your biceps for strength and endurance." data-link="./biceps/biceps.html">
+        <img src="./images/bicepsa - Copy.jpg" height="90%" alt="Lower Body">
+        <h3>Biceps</h3>
+    </div>
+    <div class="card" onclick="showDetails(this)" data-title="Legs Workout" data-description="Strengthen your legs with these effective exercises." data-link="./legs/legs.html">
+        <img src="./images/legsa.jpg" height="92%" alt="Core">
+        <h3>Legs</h3>
+    </div>
+    <div class="card" onclick="showDetails(this)" data-title="Back Workout" data-description="Improve your posture and strength with these back exercises." data-link="./abs/back/back.html">
+        <img src="./images/backas.jpg" height="92%" alt="Full Body">
+        <h3>Back</h3>
+    </div>
+    <div class="card" onclick="showDetails(this)" data-title="Abs Workout" data-description="Tone your abs with these challenging exercises." data-link="./abs/abs.html">
+        <img src="./images/absa.jpg" height="90%" alt="Full Body">
+        <h3>Abs</h3>
+    </div>
+    <div class="card" onclick="showDetails(this)" data-title="Arms Workout" data-description="Build strong arms with these exercises." data-link="./arms/arms.html">
+        <img src="./images/armsa.jpg" height="90%" width="95%" alt="Full Body">
+        <h3>Arms</h3>
+    </div>
+    <div class="card" onclick="showDetails(this)" data-title="Triceps Workout" data-description="Focus on your triceps with these targeted exercises." data-link="./triceps/triceps.html">
+        <img src="./images/tricepsa.jpg" height="90%" alt="Full Body">
+        <h3>Triceps</h3>
+    </div>
+    
+        </section>
+
+        <div id="details-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title"></h2>
+                <p id="modal-description"></p>
+                <a id="modal-button" href=""><button>Go!</button></a>
+            </div>
+        </div>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

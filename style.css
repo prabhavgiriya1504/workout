@@ -1,0 +1,298 @@
+/*
+body {
+    
+    margin: 1px;
+    border:1px solid #0a0a0a;
+    padding: 0;
+    background-color: #f1e8e89d;
+}
+
+ .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px 20px;
+    background-color: #f9f0f0e0;
+    border: 2px solid black;
+    border-bottom: 2px solid black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    flex: 0 0 15%;
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    max-width: 100%;
+    height: 12dvh;
+}
+
+#nav {
+    flex: 0 0 85%; 
+}
+
+#nav nav {
+    display: flex;
+    justify-content: space-around;/
+    align-items: center;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: xx-large;
+    font-weight: bold;
+    text-transform: lowercase; 
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+#nav a:hover {
+    color: #007BFF; 
+    border-bottom: 2px solid #000; 
+}
+
+
+#nav .icon {
+    display: flex;
+    align-items: center;
+}
+
+#nav .icon img {
+    width: 20px;
+    height: 20px;
+}
+    */
+
+
+/*
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header #logo img {
+    max-height: 50px;
+}
+
+.header #nav nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header #nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.header #nav a:hover {
+    color: #007BFF;
+}*/
+/* General styles */
+
+
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    border: 1px solid black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0e0d0d;
+    color: white;
+    border: 2px solid rgb(33, 30, 30);
+    border-bottom: 1px solid black;
+}
+#logo{
+    flex: 0 0 15%;
+}
+#nav{
+    flex: 0 0 55%;
+}
+
+#logo img {
+    max-height: 70px;
+    
+}
+
+#nav nav {
+    display: flex;
+    gap: 15px;
+}
+
+#nav a {
+    color: rgb(253, 238, 238);
+    text-decoration: none;
+    
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#nav a:hover {
+    background-color: #555;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav nav {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        background-color: #333;
+    }
+
+    #nav.show nav {
+        display: flex;
+    }
+
+    #nav nav a {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #444;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 20px;
+        background: none;
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: left;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+
+
+.workout-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.card {
+    background-color: #0c0c0ce5;
+    border: 1px solid #0c0b0b;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 55px;
+    text-align: center;
+    width: 320px;
+    height: 65vh;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 35px;
+    font-size: 18px;
+    color: #5b9683d5;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(162, 28, 28);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-title {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+#modal-description {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #d21010;
+}
+/* Center the button inside the modal content */
+
+
+button {
+    margin-top: 20px; /* Adds space between the text and the button */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
